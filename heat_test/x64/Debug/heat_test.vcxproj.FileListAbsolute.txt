@@ -1,0 +1,2 @@
+C:\Users\XH\Desktop\heat_test\x64\Debug\heat_test.exe
+F:\project\Alliance\Alliance_Robomaster\备赛\本地热量管理V3\heat_test\x64\Debug\heat_test.exe
