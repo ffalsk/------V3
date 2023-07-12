@@ -103,7 +103,7 @@ if (htim->Instance == TIM6)
 /* USER CODE END Callback 1 */
 ```
 
-### **热量控制部分**
+### **热量控制部分**(加到Shoot_Run_Control()函数末尾)
 
 ![image-20230711222905440](readme.assets/image-20230711222905440.png)
 
