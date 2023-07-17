@@ -62,11 +62,11 @@ void Shoot_Fric_data_process(void)
         /*滤波求导*/
         derivative = moving_average[1] - moving_average[0];
         /*导数比较*/
-        if (derivative < -shoot_speed * 2)
+        if (derivative < -shoot_speed * 1.65)
         {
             bullet_waiting_confirm = true;
         }
-        else if (derivative > -shoot_speed * 1.35)
+        else if (derivative > -shoot_speed * 1.2)
         {
             if (bullet_waiting_confirm == true)
             {

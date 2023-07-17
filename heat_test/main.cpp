@@ -2,7 +2,7 @@
 #include <fstream>
 #include <Windows.h>
 using namespace std;
-#define shoot_speed 15
+#define shoot_speed 30
 #define MAX_HISTROY 10
 #define Fliter_windowSize 5
 uint16_t data_process(uint16_t* data);
@@ -71,11 +71,11 @@ uint16_t data_process(uint16_t* data)
 			/*滤波求导*/
 			derivative = moving_average[1] - moving_average[0];
 			/*导数比较*/
-			if (derivative < -shoot_speed * 2)
+			if (derivative < -shoot_speed * 1.65)//麦轮*2
 			{
 				bullet_waiting_confirm = true;
 			}
-			else if (derivative > -shoot_speed * 1.35)
+			else if (derivative > -shoot_speed * 1.2)//麦轮*1.35
 			{
 				if (bullet_waiting_confirm == true)
 				{
