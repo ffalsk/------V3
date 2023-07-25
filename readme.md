@@ -1,4 +1,4 @@
-# 本地热量管理V3.1
+# 本地热量管理V3.11
 
 采用摩擦轮转速变化作为发弹判断依据
 
@@ -94,6 +94,10 @@ if (htim->Instance == TIM6)
     if (local_heat < 0)
     {
         local_heat = 0;
+    }
+    if (Referee_Inf.power_heat_data.shooter_id1_17mm_cooling_heat - Referee_Inf.game_robot_state.shooter_id1_17mm_cooling_limit >= 15) // 裁判系统判断已经超了热量
+    {
+        local_heat = Referee_Inf.power_heat_data.shooter_id1_17mm_cooling_heat;
     }
     Shoot_Fric_data_process();
     /*-------------------------------------------IMU部分---------------------------------------------*/
